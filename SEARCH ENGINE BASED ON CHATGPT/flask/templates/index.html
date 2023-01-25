@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASK YOUR QUERIES</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+  <div class="banner">
+    <div class="navbar">
+        <img src="static/logo.jpeg.jpg" class="logo">
+        <ul>
+            <li><a href="http://127.0.0.1:5500/flask/index.html">BMI</a></li>
+            <li><a href="http://127.0.0.1:5500/flask/contacts.html">Contacts</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>ASK YOUR QUERY?</h1>
+        <P>WHAT FOOD NUTRITION YOU WANT...</P>
+        <form action="/generate" method="post">
+          <input name="input_text" id="input_text" placeholder="Search...">
+          <button type="submit" id="search-button"><span></span>SEARCH</button>
+      </form>
+      <br>
+      <br>
+    <script>
+      // Get the form element
+      var form = document.querySelector("form");
+
+      // Listen for the submit event
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        // Send the form data to the server
+        fetch("/generate", {
+          method: "POST",
+          body: new FormData(form)
+        })
+      . then(function(response) { return response.text(); })
+      . then(function(response) {
+          // Display the response on the page
+          document.getElementById("output").innerHTML = response;
+        });
+      });
+    </script>
+    <p id="output"> </p>
+  </div>
+  </div>
+  </div>
+  </body>
+</html>

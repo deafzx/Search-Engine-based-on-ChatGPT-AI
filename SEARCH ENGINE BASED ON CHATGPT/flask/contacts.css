@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        color: #333;
+        margin-top: 50px;
+      }
+      p {
+        margin: 20px 0;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Contact Us</h1>
+    <p>Phone: 555-555-5555</p>
+    <p>Email: info@yourcompany.com</p>
+    <p>Address: 123 Main St, Anytown USA 12345</p>
+    <p>Fax: 555-555-5555</p>
+  </body>
+</html>
